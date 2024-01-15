@@ -16,7 +16,7 @@ const getUserChoice = (userInput) => {
 
 // Function to get a random computer choice
   const getComputerChoice = () => {
-    let randomNumber = Math.floor(Math.random() * 3);
+    let randomNumber = Math.floor(Math.random() * 3); // Generate a random number between 0 and 2
     switch (randomNumber) {
       case 0:
         return "rock";
@@ -29,7 +29,6 @@ const getUserChoice = (userInput) => {
         break;
     }
   };
-  //console.log(getComputerChoice());
 
 // Function to determine the winner based on user and computer choices
   const determineWinner = (userChoice, computerChoice) => {

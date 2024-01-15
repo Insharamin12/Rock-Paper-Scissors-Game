@@ -1,3 +1,4 @@
+// Function to get the user's choice, ensuring it is a valid option
 const getUserChoice = (userInput) => {
     userInput = userInput.toLowerCase();
     if (
@@ -12,8 +13,8 @@ const getUserChoice = (userInput) => {
     }
   };
   
-  //console.log(getUserChoice('Paper'));
-  
+
+// Function to get a random computer choice
   const getComputerChoice = () => {
     let randomNumber = Math.floor(Math.random() * 3);
     switch (randomNumber) {
@@ -29,7 +30,8 @@ const getUserChoice = (userInput) => {
     }
   };
   //console.log(getComputerChoice());
-  
+
+// Function to determine the winner based on user and computer choices
   const determineWinner = (userChoice, computerChoice) => {
     if (userChoice === "bomb") {
       return "Congratulations, you won!";
@@ -61,7 +63,8 @@ const getUserChoice = (userInput) => {
   };
   //console.log(determineWinner("paper", "scissors"));
   //console.log(determineWinner("paper", "paper"));
-  
+
+// Function to play the game, making use of the above functions
   function playGame() {
     let userChoice = getUserChoice("paper");
     let computerChoice = getComputerChoice();
